@@ -23,3 +23,4 @@ RUN sed -i -e"s/keepalive_timeout 2/keepalive_timeout 2;\n\tclient_max_body_size
 # expose both the HTTP (80) and HTTPS (443) ports
 EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
+CMD service nginx start
