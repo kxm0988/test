@@ -1,12 +1,3 @@
-FROM ubuntu:14.04
-
-# make sure apt is up to date
-RUN apt-get update
-RUN apt-get -y upgrade
-
-# install , git, etc
-RUN apt-get install -y git git-core wget zip
-
 #Nginx
 FROM nginx:1.7
 
