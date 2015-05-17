@@ -10,17 +10,10 @@ RUN apt-get install -y git git-core wget zip
 #Nginx
 FROM nginx:1.7
 
-RUN rm /etc/nginx/nginx.conf /etc/nginx/mime.types
+RUN rm /etc/nginx/nginx.conf 
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-COPY mime.types /etc/nginx/mime.types
-
-RUN mkdir /etc/nginx/ssl
-
-COPY default /etc/nginx/sites-enabled/default
-
-COPY default-ssl /etc/nginx/sites-available/default-ssl
 
 # nginx config
 RUN sed -i -e"s/keepalive_timeout\s*65/keepalive_timeout 2/" /etc/nginx/nginx.conf
