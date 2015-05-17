@@ -1,6 +1,10 @@
 #Nginx
 FROM nginx:1.7
-
+RUN \
+  add-apt-repository -y ppa:nginx/stable && \
+  apt-get update && \
+  apt-get install -y nginx && \
+  rm -rf /var/lib/apt/lists/* 
 RUN rm /etc/nginx/nginx.conf 
 
 COPY nginx.conf /etc/nginx/nginx.conf
