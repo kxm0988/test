@@ -16,4 +16,4 @@ WORKDIR /etc/nginx
 # expose both the HTTP (80) and HTTPS (443) ports
 EXPOSE 80 443
 # Define default command.
-CMD ["nginx"]
+CMD service nginx start
