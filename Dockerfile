@@ -4,9 +4,6 @@ FROM ubuntu:14.04
 RUN \
   
   apt-get update && \
-  apt-get install software-properties-common --force-yes && \
-  apt-get install python-software-properties -y && \
-  add-apt-repository -y ppa:nginx/stable && \
   apt-get install -y nginx 
   
 RUN rm /etc/nginx/nginx.conf 
