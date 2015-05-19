@@ -4,7 +4,7 @@ FROM ubuntu:14.04
 RUN \
   
   apt-get update && \
-  RUN apt-get -y install software-properties-common --force-yes && \
+  apt-get install software-properties-common --force-yes && \
   add-apt-repository -y ppa:nginx/stable && \
   apt-get install -y nginx 
   
