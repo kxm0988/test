@@ -5,6 +5,7 @@ RUN \
   
   apt-get update && \
   apt-get install software-properties-common --force-yes && \
+  apt-get install python-software-properties -y && \
   add-apt-repository -y ppa:nginx/stable && \
   apt-get install -y nginx 
   
