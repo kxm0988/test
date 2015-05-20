@@ -10,7 +10,7 @@ COPY default /etc/nginx/sites-enabled/default
 
 # nginx config
 
-RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www"]
 # Define working directory.
 WORKDIR /etc/nginx
 # expose both the HTTP (80) and HTTPS (443) ports
