@@ -14,6 +14,5 @@ RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 # Define working directory.
 WORKDIR /etc/nginx
 # expose both the HTTP (80) and HTTPS (443) ports
-EXPOSE 80 443
 # Define default command.
 CMD service nginx start
